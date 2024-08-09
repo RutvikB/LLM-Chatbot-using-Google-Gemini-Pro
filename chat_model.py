@@ -3,7 +3,6 @@ from langchain_google_genai import ChatGoogleGenerativeAI, HarmBlockThreshold, H
 from langchain.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
-
 load_dotenv()
 
 class ChatGemini():
@@ -44,21 +43,4 @@ class ChatGemini():
                 "user_query": query
             }
         )
-
         return output_stream
-
-
-
-
-
-
-# chat_model = ChatGoogleGenerativeAI(
-#             model="gemini-1.5-pro",
-#             stream=True,
-#             safety_settings={
-#                 HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
-#             },
-#             temperature=0,
-#             max_output_tokens= 100,
-#             max_retries=5
-#         )

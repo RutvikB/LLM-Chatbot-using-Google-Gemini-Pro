@@ -1,12 +1,9 @@
 import os
-from dotenv import load_dotenv
 import streamlit as st
 from langchain_core.messages import AIMessage, HumanMessage
-
 from chat_model import ChatGemini
 
 def main():
-
     st.set_page_config(page_title="LLM - Gemini Pro")
     st.title("AI-Powered ChatBot using LLM - Google Gemini Pro")
 
